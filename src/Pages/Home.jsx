@@ -4,6 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { GiFireFlower } from "react-icons/gi";
 import { GiGardeningShears } from "react-icons/gi";
+import '../componts/Boutton.css'
 function Home() {
   const navigate = useNavigate();
 
@@ -37,9 +38,8 @@ function Home() {
               Track your plants, monitor their growth, and learn new gardening tips every day!
             </p>
             <Button
-              variant="custom"
+              
               className="custom-button mt-4 fw-semibold px-4 py-2 rounded-pill shadow-lg"
-              style={{backgroundColor:'#0C969C'}}
               onClick={() => navigate('/all')}
             >
               View My Plant List

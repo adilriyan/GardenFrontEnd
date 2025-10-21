@@ -2,9 +2,11 @@ import React from "react";
 import Header from "../componts/Header";
 import { Container, Table, Image, Card,Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { getPlantById } from "../service/Apicall";  
+import { getPlantById, deletePlantById } from "../service/Apicall";  
 import { GiPlantSeed } from "react-icons/gi";
 import { TiEdit } from "react-icons/ti";
+import { MdDelete } from "react-icons/md";
+import swal from "sweetalert";
 function PlantGrowth({editID}) {
  const [plant, setPlant] = React.useState({});
   const navigate=useNavigate()
@@ -17,6 +19,11 @@ async function fetchPlantInfo() {
   console.log(data);
   setPlant(data);
 }
+  async function handleDelete(id,name) {
+    await deletePlantById(id)
+     swal("Success!", `${name} Deleted essfully!`, "Error");
+   navigate('/all')
+  }
 
   return (
     <div>
@@ -72,6 +79,7 @@ async function fetchPlantInfo() {
           <tfoot >
             <GiPlantSeed  onClick={()=>{navigate('/all')}} className="Ions infos-icon"/>
               <TiEdit onClick={()=>{navigate('/edit')}} className="Ions infos-icon"/>
+                <MdDelete   onClick={()=>{handleDelete(plant.id, plant.name)}} className="Ions infos-icon"/>
           </tfoot>
         </Table>
       </Container>

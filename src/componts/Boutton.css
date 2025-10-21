@@ -1,0 +1,90 @@
+.custom-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #0C969C; /* Theme color */
+  border-radius: 50px; /* rounded-pill style */
+  padding: 10px 30px;
+  color: #0C969C;
+  background-color: transparent;
+  font-weight: 600;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* create the circular fill behind the button */
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #c4d732;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.9s ease-in-out, height 0.9s ease-in-out; /* Slowed down the filling effect */
+  z-index: -1;
+}
+
+/* when hovering, expand the circle to fill the button */
+.custom-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+/* make text white when hovered */
+.custom-button:hover {
+  color: #fefdfd;
+  border-color: #c4d732; /* Change border color on hover */
+  transform: scale(1.05); /* Slightly scale the button */
+}
+
+/* Optional: Add a focus effect for accessibility */
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(12, 156, 84, 0.5); /* Focus ring */
+}
+
+.PlantInfoBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.4s ease;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden; /* important to hide overflow of ::after */
+  z-index: 1;
+}
+
+.Info-border-reveal {
+  background-color: transparent;
+  color: #0c0110;
+  border: 2px solid #05f80d;
+}
+
+.Info-border-reveal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #31b5f3;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.Info-border-reveal:hover::after {
+  width: 100%;
+}
+
+.Info-border-reveal:hover {
+  color: white;
+}
