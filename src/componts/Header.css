@@ -1,0 +1,21 @@
+#nave-text {
+    color: #F9E65C;
+    font-weight: bold;
+    font-size: 18px;
+}
+#nave-text:hover {
+    color: #04ff00;
+    text-decoration:wavy;
+}
+
+#naveBrand{
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left:10%;
+    color: #F9E65C;
+}
+#naveBrand:hover {
+    color: #04ff00;
+    text-decoration:wavy;
+}

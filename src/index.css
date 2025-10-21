@@ -1,0 +1,143 @@
+/* index.css */
+
+/* Define color variables for the theme */
+:root {
+  --dark-green: #2C3639;  /* Primary background */
+  --dark-teal: #3F4E4F;   /* Hero section background */
+  --medium-teal: #A27B5C; /* Buttons and accents (warm earthy gold) */
+  --light-teal: #DCD7C9;  /* Tips section / soft background */
+  --soft-blue: #E3F4F4;   /* Text color (gentle light tone) */
+  --dark-blue: #4E6E5D;   /* Inspiration section background */
+}
+
+/* Global styles */
+body {
+  background-color: var(--dark-green);
+  color: var(--soft-blue);
+  font-family: 'Arial', sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+.garden-theme {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--dark-teal);
+  color: var(--soft-blue);
+  padding: 60px 60px;
+  margin: 0px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 30px;
+  border: 3px solid var(--medium-teal); /* Add border for theme */
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: var(--medium-teal); /* Highlight title */
+}
+
+.hero-text {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Custom Button Styles */
+.btn-custom,
+.btn-outline-custom {
+  background-color: var(--medium-teal);
+  color: var(--light-teal);
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-custom {
+  border: 2px solid var(--medium-teal);
+  color: var(--medium-teal);
+  background: transparent;
+}
+
+.btn-custom:hover,
+.btn-outline-custom:hover {
+  background-color: var(--light-teal);
+  color: var(--dark-green);
+}
+
+/* Tips Section */
+.tips-section {
+  background-color: var(--light-teal);
+  color: var(--dark-green);
+}
+
+.tips-title {
+  color: var(--medium-teal);
+}
+
+.tip-card {
+  background-color: #fff; /* Light background for cards */
+  color: var(--dark-green);
+  width: 280px;
+  border: 2px solid var(--dark-green);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Inspiration Section */
+.inspiration-section {
+  background-color: var(--dark-blue);
+  color: var(--soft-blue);
+}
+
+.inspiration-title {
+  color: var(--medium-teal);
+}
+
+.inspiration-image {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid var(--medium-teal);
+  transition: transform 0.4s ease;
+}
+
+.inspiration-image:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Styles */
+.bg-custom-navbar {
+  background-color: var(--dark-teal) !important; /* Match theme */
+}
+.footer{
+    background-color: #2C3639;  
+    color: #F9E65C;
+    padding: 15px 0;
+    text-align: center;
+
+}
+.footer:hover {
+    color: #04ff00;
+    text-decoration:wavy;
+}
+.Ions{
+    font-size:40px;
+    margin:10px;
+    cursor:pointer;
+    
+}
+.infos-icon{
+    font-size:40px;
+    margin-left:10px;
+    cursor:pointer;
+    color: var(--medium-teal);
+}
