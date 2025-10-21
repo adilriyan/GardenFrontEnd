@@ -2,7 +2,8 @@
     color: #F9E65C;
     font-weight: bold;
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 15px;
+    text-decoration: none;
 }
 #nave-text:hover {
     color: #04ff00;
