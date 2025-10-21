@@ -111,6 +111,16 @@ function AddPlant({ plantData, setPlantData }) {
                       onChange={handleChange}
                     />
                   </Form.Group>
+                    <Form.Group className="mb-3" controlId="watering">
+                    <Form.Label>Sunlight</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="low/medium/high sun light"
+                      name="sunlight"
+                      value={plantData.sunlight}
+                      onChange={handleChange}
+                    />
+                  </Form.Group>
 
                   <Form.Group className="mb-3" controlId="notes">
                     <Form.Label>Additional Notes</Form.Label>

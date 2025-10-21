@@ -108,6 +108,16 @@ console.log(editID);
                       onChange={handleChange}
                     />
                   </Form.Group>
+                  <Form.Group className="mb-3" controlId="watering">
+                                      <Form.Label>Sunlight</Form.Label>
+                                      <Form.Control
+                                        type="text"
+                                        placeholder="low/medium/high sun light"
+                                        name="sunlight"
+                                        value={data?.sunlight}
+                                        onChange={handleChange}
+                                      />
+                                    </Form.Group>
 
              
                   <Form.Group className="mb-3" controlId="notes">

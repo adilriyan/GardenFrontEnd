@@ -13,6 +13,7 @@ function App() {
     name: '',
     category: '',
     waterSchedule: '',
+    sunlight:'',
     lastWatered: '',
     notes: "",
     image: ''
