@@ -38,7 +38,7 @@ function Home() {
             </p>
             <Button
               variant="custom"
-              className="mt-4 fw-semibold px-4 py-2 rounded-pill shadow-lg"
+              className="custom-button mt-4 fw-semibold px-4 py-2 rounded-pill shadow-lg"
               style={{backgroundColor:'#0C969C'}}
               onClick={() => navigate('/all')}
             >

@@ -141,3 +141,39 @@ body {
     cursor:pointer;
     color: var(--medium-teal);
 }
+
+.custom-button {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #0C969C; /* Updated to match your button's color */
+  outline: none;
+  overflow: hidden;
+  color: #0C969C; /* Updated to match your button's color */
+  background-color: transparent; /* Allows the hover fill effect */
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.custom-button::before {
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em; /* 2x the original $width (10em) */
+  height: 20em; /* 2x the original $width (10em) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.custom-button:hover {
+  color: #fff;
+  /* No change needed for ::before here, as it's already defined */
+}
+
+.custom-button:hover::before {
+  box-shadow: inset 0 0 0 10em rgba(12, 150, 156, 1); /* Inset shadow fill with your color */
+}
