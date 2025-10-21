@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { searchPlantByName } from '../service/Apicall';
 import { GiPlantsAndAnimals } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import'./Header.css'
 function Header({ set, onSearchResults }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,9 +37,9 @@ function Header({ set, onSearchResults }) {
             style={{ maxHeight: '100px',marginLeft:'45%' }}
             navbarScroll
           >
-            <Nav.Link href="/"  id='nave-text'>Home</Nav.Link>
-            <Nav.Link href='/addPlant' id='nave-text' >Add your Plants</Nav.Link>
-            <Nav.Link href='/all' id='nave-text'>Plants</Nav.Link>
+            <Link to={"/"}  id='nave-text'>Home</Link>
+            <Link to={'/addPlant'} id='nave-text' >Add your Plants</Link>
+            <Link to={'/all'} id='nave-text'>Plants</Link>
           </Nav>
           {
             set && 
