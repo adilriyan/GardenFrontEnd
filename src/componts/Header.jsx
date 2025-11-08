@@ -29,7 +29,7 @@ function Header({ set, onSearchResults }) {
   return (
     <Navbar expand="lg" className="bg-custom-navbar text-light">
       <Container fluid>
-        <Navbar.Brand href='/' id='naveBrand'><GiPlantsAndAnimals className='Ions'/>Garden Tracker</Navbar.Brand> 
+        <Navbar.Brand href='/' id='naveBrand'><GiPlantsAndAnimals className='Ions'/>Green Base</Navbar.Brand> 
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
